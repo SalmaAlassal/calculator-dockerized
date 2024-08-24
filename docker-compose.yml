@@ -1,0 +1,12 @@
+services:
+  calculator:
+    build: .
+    container_name: calculator
+    ports:
+      - "5000:5000"
+    networks:
+      - calculator-network
+
+networks:
+  calculator-network:
+    driver: bridge
